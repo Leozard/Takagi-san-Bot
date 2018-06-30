@@ -1,7 +1,7 @@
 # Takagi-san-Bot
 A simple bot made for simple tasks
 
-# Dependencies
+<h3>Dependencies</h3>
 <ul>
     <li><a href="https://github.com/RogueException/Discord.Net">Discord.net</a></li>
     <li><a href="https://github.com/KurozeroPB/Kitsu">Kitsu</a></li>
