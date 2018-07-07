@@ -17,7 +17,6 @@ namespace TakagisanBot.Moderation
         {
             var items = await Context.Channel.GetMessagesAsync(deleteNum + 1).Flatten();
             await Context.Channel.DeleteMessagesAsync(items);
-            await Task.Delay(0);
         }
 
         
@@ -29,7 +28,6 @@ namespace TakagisanBot.Moderation
         {
             var items = await Context.Channel.GetMessagesAsync(100).Flatten();
             await Context.Channel.DeleteMessagesAsync(items);
-            await Task.Delay(0);
         }
 
     }

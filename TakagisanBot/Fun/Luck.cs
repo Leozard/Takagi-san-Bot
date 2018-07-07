@@ -13,7 +13,7 @@ namespace TakagisanBot.Fun
 
         public async Task LuckAsync([Remainder] string placeholder = null)
         {
-            Random rnd = new Random();
+            Random rnd = new Random(int.Parse(Guid.NewGuid().ToString().Substring(0, 8), System.Globalization.NumberStyles.HexNumber));
             int luck = rnd.Next(101);
 
             if (luck == 0)

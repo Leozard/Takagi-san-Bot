@@ -10,10 +10,9 @@ namespace TakagisanBot.Utility
 
         public async Task ChooseAsync([Remainder] string choices)
         {
-            string[] separaters = { ";",};
             string[] choicesArray = choices.Split(";", StringSplitOptions.RemoveEmptyEntries);
 
-            Random r = new Random();
+            Random r = new Random(int.Parse(Guid.NewGuid().ToString().Substring(0, 8), System.Globalization.NumberStyles.HexNumber));
             int choose = r.Next(choicesArray.Length);
 
             await ReplyAsync($"I choose... {choicesArray[choose].TrimStart(' ').TrimEnd(' ')}!");

@@ -1,14 +1,12 @@
 ﻿using Discord.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace TakagisanBot.Fun
 {
     public class FlipCoin : ModuleBase<SocketCommandContext>
     {
-        Random rnd = new Random();
+        Random rnd = new Random(int.Parse(Guid.NewGuid().ToString().Substring(0, 8), System.Globalization.NumberStyles.HexNumber));
 
 
         [Command("flipcoin")]

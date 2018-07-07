@@ -6,7 +6,7 @@ namespace TakagisanBot.Fun
 {
     public class RPS : ModuleBase<SocketCommandContext>
     {
-        Random rnd = new Random();
+        Random rnd = new Random(int.Parse(Guid.NewGuid().ToString().Substring(0, 8), System.Globalization.NumberStyles.HexNumber));
 
         [Command("rps")]
 
